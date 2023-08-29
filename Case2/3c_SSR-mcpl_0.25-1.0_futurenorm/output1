@@ -1,0 +1,1150 @@
+[mpiexec@ibm-106] Launch arguments: /usr/bin/srun -N 1 -n 1 --ntasks-per-node 1 --nodelist ibm-106 --input none /opt/intel/oneapi/mpi/2021.9.0/bin//hydra_bstrap_proxy --upstream-host ibm-106.localdomain --upstream-port 40645 --pgid 0 --launcher slurm --launcher-number 1 --base-path /opt/intel/oneapi/mpi/2021.9.0/bin/ --tree-width 16 --tree-level 1 --time-left -1 --launch-type 0 --debug /opt/intel/oneapi/mpi/2021.9.0/bin//hydra_pmi_proxy --usize -1 --auto-cleanup 1 --abort-signal 9 
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=init pmi_version=1 pmi_subversion=1
+[proxy:0:0@ibm-106] PMI response: cmd=response_to_init pmi_version=1 pmi_subversion=1 rc=0
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=init pmi_version=1 pmi_subversion=1
+[proxy:0:0@ibm-106] PMI response: cmd=response_to_init pmi_version=1 pmi_subversion=1 rc=0
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=get_maxes
+[proxy:0:0@ibm-106] PMI response: cmd=maxes kvsname_max=256 keylen_max=64 vallen_max=4096
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=get_maxes
+[proxy:0:0@ibm-106] PMI response: cmd=maxes kvsname_max=256 keylen_max=64 vallen_max=4096
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=get_appnum
+[proxy:0:0@ibm-106] PMI response: cmd=appnum appnum=0
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=get_appnum
+[proxy:0:0@ibm-106] PMI response: cmd=appnum appnum=0
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=get_my_kvsname
+[proxy:0:0@ibm-106] PMI response: cmd=my_kvsname kvsname=kvs_2894_0
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=get_my_kvsname
+[proxy:0:0@ibm-106] PMI response: cmd=my_kvsname kvsname=kvs_2894_0
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=get kvsname=kvs_2894_0 key=PMI_process_mapping
+[proxy:0:0@ibm-106] PMI response: cmd=get_result rc=0 msg=success value=(vector,(0,1,2))
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=get kvsname=kvs_2894_0 key=PMI_process_mapping
+[proxy:0:0@ibm-106] PMI response: cmd=get_result rc=0 msg=success value=(vector,(0,1,2))
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=put kvsname=kvs_2894_0 key=-bcast-1-0 value=2F6465762F73686D2F496E74656C5F4D50495F69486A534E71
+[proxy:0:0@ibm-106] PMI response: cmd=put_result rc=0 msg=success
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=barrier_in
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=barrier_in
+[proxy:0:0@ibm-106] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-106] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=get kvsname=kvs_2894_0 key=-bcast-1-0
+[proxy:0:0@ibm-106] PMI response: cmd=get_result rc=0 msg=success value=2F6465762F73686D2F496E74656C5F4D50495F69486A534E71
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=barrier_in
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=put kvsname=kvs_2894_0 key=bc-0 value=mpi#6B0FBD13835DAA9B002000B43977CC2B3200F8D74F00000000004F030088F4D423E72F3551DD211150FE800000000000000E42A1FFFE33B4264D48B00FA13315F9884E9C53C93526DF0A0001008C1B5C7CE13315F9884E34ABCA3526030F008312010022832103004D48B00FA133BF09C94FA2E73B3526DF0A0001008C1B5C7CE133BF09C94FD4963E3526030F0083100A010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000$
+[proxy:0:0@ibm-106] PMI response: cmd=put_result rc=0 msg=success
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=barrier_in
+[proxy:0:0@ibm-106] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-106] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=get kvsname=kvs_2894_0 key=bc-0
+[proxy:0:0@ibm-106] PMI response: cmd=get_result rc=0 msg=success value=mpi#6B0FBD13835DAA9B002000B43977CC2B3200F8D74F00000000004F030088F4D423E72F3551DD211150FE800000000000000E42A1FFFE33B4264D48B00FA13315F9884E9C53C93526DF0A0001008C1B5C7CE13315F9884E34ABCA3526030F008312010022832103004D48B00FA133BF09C94FA2E73B3526DF0A0001008C1B5C7CE133BF09C94FD4963E3526030F0083100A010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000$
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2023 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.13.4-dev
+        Git SHA1 | 46866cb33abe462f8787e7316a35e9d5235ccedd
+       Date/Time | 2023-08-28 15:41:09
+   MPI Processes | 2
+  OpenMP Threads | 28
+
+ Reading settings XML file...
+ Reading cross sections XML file...
+ Reading materials XML file...
+ Reading geometry XML file...
+ Reading H1 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/H1.h5
+ Reading H2 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/H2.h5
+ Reading O16 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/O16.h5
+ Reading O17 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/O17.h5
+ Reading O18 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/O18.h5
+ Reading C12 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/C12.h5
+ Reading C13 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/C13.h5
+ Reading Na23 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Na23.h5
+ Reading Mg24 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Mg24.h5
+ Reading Mg25 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Mg25.h5
+ Reading Mg26 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Mg26.h5
+ Reading Al27 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Al27.h5
+ Reading Si28 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Si28.h5
+ Reading Si29 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Si29.h5
+ Reading Si30 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Si30.h5
+ Reading K39 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/K39.h5
+ Reading K40 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/K40.h5
+ Reading K41 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/K41.h5
+ Reading Ca40 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca40.h5
+ Reading Ca42 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca42.h5
+ Reading Ca43 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca43.h5
+ Reading Ca44 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca44.h5
+ Reading Ca46 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca46.h5
+ Reading Ca48 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca48.h5
+ Reading Fe54 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe54.h5
+ Reading Fe56 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe56.h5
+ Reading Fe57 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe57.h5
+ Reading Fe58 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe58.h5
+ Reading B10 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/B10.h5
+ Reading B11 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/B11.h5
+ Reading Ti46 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti46.h5
+ Reading Ti47 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti47.h5
+ Reading Ti48 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti48.h5
+ Reading Ti49 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti49.h5
+ Reading Ti50 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti50.h5
+ Reading V50 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/V50.h5
+ Reading V51 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/V51.h5
+ Reading c_H_in_H2O from
+ /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_H_in_H2O.h5
+ Reading c_SiO2_alpha from
+ /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_SiO2_alpha.h5
+ Reading c_Fe56 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_Fe56.h5
+ Reading c_Al27 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_Al27.h5
+ Minimum neutron data temperature: 250 K
+ Maximum neutron data temperature: 2500 K
+ Reading tallies XML file...
+ Preparing distributed cell instances...
+ Reading plot XML file...
+ Writing summary.h5 file...
+ Maximum neutron transport energy: 20000000 eV for H1
+
+ ===============>     FIXED SOURCE TRANSPORT SIMULATION     <===============
+
+ Simulating batch 1
+ Simulating batch 2
+ Simulating batch 3
+ Simulating batch 4
+ Simulating batch 5
+ Simulating batch 6
+ Simulating batch 7
+ Simulating batch 8
+ Simulating batch 9
+ Simulating batch 10
+ Simulating batch 11
+ Simulating batch 12
+ Simulating batch 13
+ Simulating batch 14
+ Simulating batch 15
+ Simulating batch 16
+ Simulating batch 17
+ Simulating batch 18
+ Simulating batch 19
+ Simulating batch 20
+ Simulating batch 21
+ Simulating batch 22
+ Simulating batch 23
+ Simulating batch 24
+ Simulating batch 25
+ Simulating batch 26
+ Simulating batch 27
+ Simulating batch 28
+ Simulating batch 29
+ Simulating batch 30
+ Simulating batch 31
+ Simulating batch 32
+ Simulating batch 33
+ Simulating batch 34
+ Simulating batch 35
+ Simulating batch 36
+ Simulating batch 37
+ Simulating batch 38
+ Simulating batch 39
+ Simulating batch 40
+ Simulating batch 41
+ Simulating batch 42
+ Simulating batch 43
+ Simulating batch 44
+ Simulating batch 45
+ Simulating batch 46
+ Simulating batch 47
+ Simulating batch 48
+ Simulating batch 49
+ Simulating batch 50
+ Simulating batch 51
+ Simulating batch 52
+ Simulating batch 53
+ Simulating batch 54
+ Simulating batch 55
+ Simulating batch 56
+ Simulating batch 57
+ Simulating batch 58
+ Simulating batch 59
+ Simulating batch 60
+ Simulating batch 61
+ Simulating batch 62
+ Simulating batch 63
+ Simulating batch 64
+ Simulating batch 65
+ Simulating batch 66
+ Simulating batch 67
+ Simulating batch 68
+ Simulating batch 69
+ Simulating batch 70
+ Simulating batch 71
+ Simulating batch 72
+ Simulating batch 73
+ Simulating batch 74
+ Simulating batch 75
+ Simulating batch 76
+ Simulating batch 77
+ Simulating batch 78
+ Simulating batch 79
+ Simulating batch 80
+ Simulating batch 81
+ Simulating batch 82
+ Simulating batch 83
+ Simulating batch 84
+ Simulating batch 85
+ Simulating batch 86
+ Simulating batch 87
+ Simulating batch 88
+ Simulating batch 89
+ Simulating batch 90
+ Simulating batch 91
+ Simulating batch 92
+ Simulating batch 93
+ Simulating batch 94
+ Simulating batch 95
+ Simulating batch 96
+ Simulating batch 97
+ Simulating batch 98
+ Simulating batch 99
+ Simulating batch 100
+ Simulating batch 101
+ Simulating batch 102
+ Simulating batch 103
+ Simulating batch 104
+ Simulating batch 105
+ Simulating batch 106
+ Simulating batch 107
+ Simulating batch 108
+ Simulating batch 109
+ Simulating batch 110
+ Simulating batch 111
+ Simulating batch 112
+ Simulating batch 113
+ Simulating batch 114
+ Simulating batch 115
+ Simulating batch 116
+ Simulating batch 117
+ Simulating batch 118
+ Simulating batch 119
+ Simulating batch 120
+ Simulating batch 121
+ Simulating batch 122
+ Simulating batch 123
+ Simulating batch 124
+ Simulating batch 125
+ Simulating batch 126
+ Simulating batch 127
+ Simulating batch 128
+ Simulating batch 129
+ Simulating batch 130
+ Simulating batch 131
+ Simulating batch 132
+ Simulating batch 133
+ Simulating batch 134
+ Simulating batch 135
+ Simulating batch 136
+ Simulating batch 137
+ Simulating batch 138
+ Simulating batch 139
+ Simulating batch 140
+ Simulating batch 141
+ Simulating batch 142
+ Simulating batch 143
+ Simulating batch 144
+ Simulating batch 145
+ Simulating batch 146
+ Simulating batch 147
+ Simulating batch 148
+ Simulating batch 149
+ Simulating batch 150
+ Simulating batch 151
+ Simulating batch 152
+ Simulating batch 153
+ Simulating batch 154
+ Simulating batch 155
+ Simulating batch 156
+ Simulating batch 157
+ Simulating batch 158
+ Simulating batch 159
+ Simulating batch 160
+ Simulating batch 161
+ Simulating batch 162
+ Simulating batch 163
+ Simulating batch 164
+ Simulating batch 165
+ Simulating batch 166
+ Simulating batch 167
+ Simulating batch 168
+ Simulating batch 169
+ Simulating batch 170
+ Simulating batch 171
+ Simulating batch 172
+ Simulating batch 173
+ Simulating batch 174
+ Simulating batch 175
+ Simulating batch 176
+ Simulating batch 177
+ Simulating batch 178
+ Simulating batch 179
+ Simulating batch 180
+ Simulating batch 181
+ Simulating batch 182
+ Simulating batch 183
+ Simulating batch 184
+ Simulating batch 185
+ Simulating batch 186
+ Simulating batch 187
+ Simulating batch 188
+ Simulating batch 189
+ Simulating batch 190
+ Simulating batch 191
+ Simulating batch 192
+ Simulating batch 193
+ Simulating batch 194
+ Simulating batch 195
+ Simulating batch 196
+ Simulating batch 197
+ Simulating batch 198
+ Simulating batch 199
+ Simulating batch 200
+ Simulating batch 201
+ Simulating batch 202
+ Simulating batch 203
+ Simulating batch 204
+ Simulating batch 205
+ Simulating batch 206
+ Simulating batch 207
+ Simulating batch 208
+ Simulating batch 209
+ Simulating batch 210
+ Simulating batch 211
+ Simulating batch 212
+ Simulating batch 213
+ Simulating batch 214
+ Simulating batch 215
+ Simulating batch 216
+ Simulating batch 217
+ Simulating batch 218
+ Simulating batch 219
+ Simulating batch 220
+ Simulating batch 221
+ Simulating batch 222
+ Simulating batch 223
+ Simulating batch 224
+ Simulating batch 225
+ Simulating batch 226
+ Simulating batch 227
+ Simulating batch 228
+ Simulating batch 229
+ Simulating batch 230
+ Simulating batch 231
+ Simulating batch 232
+ Simulating batch 233
+ Simulating batch 234
+ Simulating batch 235
+ Simulating batch 236
+ Simulating batch 237
+ Simulating batch 238
+ Simulating batch 239
+ Simulating batch 240
+ Simulating batch 241
+ Simulating batch 242
+ Simulating batch 243
+ Simulating batch 244
+ Simulating batch 245
+ Simulating batch 246
+ Simulating batch 247
+ Simulating batch 248
+ Simulating batch 249
+ Simulating batch 250
+ Simulating batch 251
+ Simulating batch 252
+ Simulating batch 253
+ Simulating batch 254
+ Simulating batch 255
+ Simulating batch 256
+ Simulating batch 257
+ Simulating batch 258
+ Simulating batch 259
+ Simulating batch 260
+ Simulating batch 261
+ Simulating batch 262
+ Simulating batch 263
+ Simulating batch 264
+ Simulating batch 265
+ Simulating batch 266
+ Simulating batch 267
+ Simulating batch 268
+ Simulating batch 269
+ Simulating batch 270
+ Simulating batch 271
+ Simulating batch 272
+ Simulating batch 273
+ Simulating batch 274
+ Simulating batch 275
+ Simulating batch 276
+ Simulating batch 277
+ Simulating batch 278
+ Simulating batch 279
+ Simulating batch 280
+ Simulating batch 281
+ Simulating batch 282
+ Simulating batch 283
+ Simulating batch 284
+ Simulating batch 285
+ Simulating batch 286
+ Simulating batch 287
+ Simulating batch 288
+ Simulating batch 289
+ Simulating batch 290
+ Simulating batch 291
+ Simulating batch 292
+ Simulating batch 293
+ Simulating batch 294
+ Simulating batch 295
+ Simulating batch 296
+ Simulating batch 297
+ Simulating batch 298
+ Simulating batch 299
+ Simulating batch 300
+ Simulating batch 301
+ Simulating batch 302
+ Simulating batch 303
+ Simulating batch 304
+ Simulating batch 305
+ Simulating batch 306
+ Simulating batch 307
+ Simulating batch 308
+ Simulating batch 309
+ Simulating batch 310
+ Simulating batch 311
+ Simulating batch 312
+ Simulating batch 313
+ Simulating batch 314
+ Simulating batch 315
+ Simulating batch 316
+ Simulating batch 317
+ Simulating batch 318
+ Simulating batch 319
+ Simulating batch 320
+ Simulating batch 321
+ Simulating batch 322
+ Simulating batch 323
+ Simulating batch 324
+ Simulating batch 325
+ Simulating batch 326
+ Simulating batch 327
+ Simulating batch 328
+ Simulating batch 329
+ Simulating batch 330
+ Simulating batch 331
+ Simulating batch 332
+ Simulating batch 333
+ Simulating batch 334
+ Simulating batch 335
+ Simulating batch 336
+ Simulating batch 337
+ Simulating batch 338
+ Simulating batch 339
+ Simulating batch 340
+ Simulating batch 341
+ Simulating batch 342
+ Simulating batch 343
+ Simulating batch 344
+ Simulating batch 345
+ Simulating batch 346
+ Simulating batch 347
+ Simulating batch 348
+ Simulating batch 349
+ Simulating batch 350
+ Simulating batch 351
+ Simulating batch 352
+ Simulating batch 353
+ Simulating batch 354
+ Simulating batch 355
+ Simulating batch 356
+ Simulating batch 357
+ Simulating batch 358
+ Simulating batch 359
+ Simulating batch 360
+ Simulating batch 361
+ Simulating batch 362
+ Simulating batch 363
+ Simulating batch 364
+ Simulating batch 365
+ Simulating batch 366
+ Simulating batch 367
+ Simulating batch 368
+ Simulating batch 369
+ Simulating batch 370
+ Simulating batch 371
+ Simulating batch 372
+ Simulating batch 373
+ Simulating batch 374
+ Simulating batch 375
+ Simulating batch 376
+ Simulating batch 377
+ Simulating batch 378
+ Simulating batch 379
+ Simulating batch 380
+ Simulating batch 381
+ Simulating batch 382
+ Simulating batch 383
+ Simulating batch 384
+ Simulating batch 385
+ Simulating batch 386
+ Simulating batch 387
+ Simulating batch 388
+ Simulating batch 389
+ Simulating batch 390
+ Simulating batch 391
+ Simulating batch 392
+ Simulating batch 393
+ Simulating batch 394
+ Simulating batch 395
+ Simulating batch 396
+ Simulating batch 397
+ Simulating batch 398
+ Simulating batch 399
+ Simulating batch 400
+ Simulating batch 401
+ Simulating batch 402
+ Simulating batch 403
+ Simulating batch 404
+ Simulating batch 405
+ Simulating batch 406
+ Simulating batch 407
+ Simulating batch 408
+ Simulating batch 409
+ Simulating batch 410
+ Simulating batch 411
+ Simulating batch 412
+ Simulating batch 413
+ Simulating batch 414
+ Simulating batch 415
+ Simulating batch 416
+ Simulating batch 417
+ Simulating batch 418
+ Simulating batch 419
+ Simulating batch 420
+ Simulating batch 421
+ Simulating batch 422
+ Simulating batch 423
+ Simulating batch 424
+ Simulating batch 425
+ Simulating batch 426
+ Simulating batch 427
+ Simulating batch 428
+ Simulating batch 429
+ Simulating batch 430
+ Simulating batch 431
+ Simulating batch 432
+ Simulating batch 433
+ Simulating batch 434
+ Simulating batch 435
+ Simulating batch 436
+ Simulating batch 437
+ Simulating batch 438
+ Simulating batch 439
+ Simulating batch 440
+ Simulating batch 441
+ Simulating batch 442
+ Simulating batch 443
+ Simulating batch 444
+ Simulating batch 445
+ Simulating batch 446
+ Simulating batch 447
+ Simulating batch 448
+ Simulating batch 449
+ Simulating batch 450
+ Simulating batch 451
+ Simulating batch 452
+ Simulating batch 453
+ Simulating batch 454
+ Simulating batch 455
+ Simulating batch 456
+ Simulating batch 457
+ Simulating batch 458
+ Simulating batch 459
+ Simulating batch 460
+ Simulating batch 461
+ Simulating batch 462
+ Simulating batch 463
+ Simulating batch 464
+ Simulating batch 465
+ Simulating batch 466
+ Simulating batch 467
+ Simulating batch 468
+ Simulating batch 469
+ Simulating batch 470
+ Simulating batch 471
+ Simulating batch 472
+ Simulating batch 473
+ Simulating batch 474
+ Simulating batch 475
+ Simulating batch 476
+ Simulating batch 477
+ Simulating batch 478
+ Simulating batch 479
+ Simulating batch 480
+ Simulating batch 481
+ Simulating batch 482
+ Simulating batch 483
+ Simulating batch 484
+ Simulating batch 485
+ Simulating batch 486
+ Simulating batch 487
+ Simulating batch 488
+ Simulating batch 489
+ Simulating batch 490
+ Simulating batch 491
+ Simulating batch 492
+ Simulating batch 493
+ Simulating batch 494
+ Simulating batch 495
+ Simulating batch 496
+ Simulating batch 497
+ Simulating batch 498
+ Simulating batch 499
+ Simulating batch 500
+ Simulating batch 501
+ Simulating batch 502
+ Simulating batch 503
+ Simulating batch 504
+ Simulating batch 505
+ Simulating batch 506
+ Simulating batch 507
+ Simulating batch 508
+ Simulating batch 509
+ Simulating batch 510
+ Simulating batch 511
+ Simulating batch 512
+ Simulating batch 513
+ Simulating batch 514
+ Simulating batch 515
+ Simulating batch 516
+ Simulating batch 517
+ Simulating batch 518
+ Simulating batch 519
+ Simulating batch 520
+ Simulating batch 521
+ Simulating batch 522
+ Simulating batch 523
+ Simulating batch 524
+ Simulating batch 525
+ Simulating batch 526
+ Simulating batch 527
+ Simulating batch 528
+ Simulating batch 529
+ Simulating batch 530
+ Simulating batch 531
+ Simulating batch 532
+ Simulating batch 533
+ Simulating batch 534
+ Simulating batch 535
+ Simulating batch 536
+ Simulating batch 537
+ Simulating batch 538
+ Simulating batch 539
+ Simulating batch 540
+ Simulating batch 541
+ Simulating batch 542
+ Simulating batch 543
+ Simulating batch 544
+ Simulating batch 545
+ Simulating batch 546
+ Simulating batch 547
+ Simulating batch 548
+ Simulating batch 549
+ Simulating batch 550
+ Simulating batch 551
+ Simulating batch 552
+ Simulating batch 553
+ Simulating batch 554
+ Simulating batch 555
+ Simulating batch 556
+ Simulating batch 557
+ Simulating batch 558
+ Simulating batch 559
+ Simulating batch 560
+ Simulating batch 561
+ Simulating batch 562
+ Simulating batch 563
+ Simulating batch 564
+ Simulating batch 565
+ Simulating batch 566
+ Simulating batch 567
+ Simulating batch 568
+ Simulating batch 569
+ Simulating batch 570
+ Simulating batch 571
+ Simulating batch 572
+ Simulating batch 573
+ Simulating batch 574
+ Simulating batch 575
+ Simulating batch 576
+ Simulating batch 577
+ Simulating batch 578
+ Simulating batch 579
+ Simulating batch 580
+ Simulating batch 581
+ Simulating batch 582
+ Simulating batch 583
+ Simulating batch 584
+ Simulating batch 585
+ Simulating batch 586
+ Simulating batch 587
+ Simulating batch 588
+ Simulating batch 589
+ Simulating batch 590
+ Simulating batch 591
+ Simulating batch 592
+ Simulating batch 593
+ Simulating batch 594
+ Simulating batch 595
+ Simulating batch 596
+ Simulating batch 597
+ Simulating batch 598
+ Simulating batch 599
+ Simulating batch 600
+ Simulating batch 601
+ Simulating batch 602
+ Simulating batch 603
+ Simulating batch 604
+ Simulating batch 605
+ Simulating batch 606
+ Simulating batch 607
+ Simulating batch 608
+ Simulating batch 609
+ Simulating batch 610
+ Simulating batch 611
+ Simulating batch 612
+ Simulating batch 613
+ Simulating batch 614
+ Simulating batch 615
+ Simulating batch 616
+ Simulating batch 617
+ Simulating batch 618
+ Simulating batch 619
+ Simulating batch 620
+ Simulating batch 621
+ Simulating batch 622
+ Simulating batch 623
+ Simulating batch 624
+ Simulating batch 625
+ Simulating batch 626
+ Simulating batch 627
+ Simulating batch 628
+ Simulating batch 629
+ Simulating batch 630
+ Simulating batch 631
+ Simulating batch 632
+ Simulating batch 633
+ Simulating batch 634
+ Simulating batch 635
+ Simulating batch 636
+ Simulating batch 637
+ Simulating batch 638
+ Simulating batch 639
+ Simulating batch 640
+ Simulating batch 641
+ Simulating batch 642
+ Simulating batch 643
+ Simulating batch 644
+ Simulating batch 645
+ Simulating batch 646
+ Simulating batch 647
+ Simulating batch 648
+ Simulating batch 649
+ Simulating batch 650
+ Simulating batch 651
+ Simulating batch 652
+ Simulating batch 653
+ Simulating batch 654
+ Simulating batch 655
+ Simulating batch 656
+ Simulating batch 657
+ Simulating batch 658
+ Simulating batch 659
+ Simulating batch 660
+ Simulating batch 661
+ Simulating batch 662
+ Simulating batch 663
+ Simulating batch 664
+ Simulating batch 665
+ Simulating batch 666
+ Simulating batch 667
+ Simulating batch 668
+ Simulating batch 669
+ Simulating batch 670
+ Simulating batch 671
+ Simulating batch 672
+ Simulating batch 673
+ Simulating batch 674
+ Simulating batch 675
+ Simulating batch 676
+ Simulating batch 677
+ Simulating batch 678
+ Simulating batch 679
+ Simulating batch 680
+ Simulating batch 681
+ Simulating batch 682
+ Simulating batch 683
+ Simulating batch 684
+ Simulating batch 685
+ Simulating batch 686
+ Simulating batch 687
+ Simulating batch 688
+ Simulating batch 689
+ Simulating batch 690
+ Simulating batch 691
+ Simulating batch 692
+ Simulating batch 693
+ Simulating batch 694
+ Simulating batch 695
+ Simulating batch 696
+ Simulating batch 697
+ Simulating batch 698
+ Simulating batch 699
+ Simulating batch 700
+ Simulating batch 701
+ Simulating batch 702
+ Simulating batch 703
+ Simulating batch 704
+ Simulating batch 705
+ Simulating batch 706
+ Simulating batch 707
+ Simulating batch 708
+ Simulating batch 709
+ Simulating batch 710
+ Simulating batch 711
+ Simulating batch 712
+ Simulating batch 713
+ Simulating batch 714
+ Simulating batch 715
+ Simulating batch 716
+ Simulating batch 717
+ Simulating batch 718
+ Simulating batch 719
+ Simulating batch 720
+ Simulating batch 721
+ Simulating batch 722
+ Simulating batch 723
+ Simulating batch 724
+ Simulating batch 725
+ Simulating batch 726
+ Simulating batch 727
+ Simulating batch 728
+ Simulating batch 729
+ Simulating batch 730
+ Simulating batch 731
+ Simulating batch 732
+ Simulating batch 733
+ Simulating batch 734
+ Simulating batch 735
+ Simulating batch 736
+ Simulating batch 737
+ Simulating batch 738
+ Simulating batch 739
+ Simulating batch 740
+ Simulating batch 741
+ Simulating batch 742
+ Simulating batch 743
+ Simulating batch 744
+ Simulating batch 745
+ Simulating batch 746
+ Simulating batch 747
+ Simulating batch 748
+ Simulating batch 749
+ Simulating batch 750
+ Simulating batch 751
+ Simulating batch 752
+ Simulating batch 753
+ Simulating batch 754
+ Simulating batch 755
+ Simulating batch 756
+ Simulating batch 757
+ Simulating batch 758
+ Simulating batch 759
+ Simulating batch 760
+ Simulating batch 761
+ Simulating batch 762
+ Simulating batch 763
+ Simulating batch 764
+ Simulating batch 765
+ Simulating batch 766
+ Simulating batch 767
+ Simulating batch 768
+ Simulating batch 769
+ Simulating batch 770
+ Simulating batch 771
+ Simulating batch 772
+ Simulating batch 773
+ Simulating batch 774
+ Simulating batch 775
+ Simulating batch 776
+ Simulating batch 777
+ Simulating batch 778
+ Simulating batch 779
+ Simulating batch 780
+ Simulating batch 781
+ Simulating batch 782
+ Simulating batch 783
+ Simulating batch 784
+ Simulating batch 785
+ Simulating batch 786
+ Simulating batch 787
+ Simulating batch 788
+ Simulating batch 789
+ Simulating batch 790
+ Simulating batch 791
+ Simulating batch 792
+ Simulating batch 793
+ Simulating batch 794
+ Simulating batch 795
+ Simulating batch 796
+ Simulating batch 797
+ Simulating batch 798
+ Simulating batch 799
+ Simulating batch 800
+ Simulating batch 801
+ Simulating batch 802
+ Simulating batch 803
+ Simulating batch 804
+ Simulating batch 805
+ Simulating batch 806
+ Simulating batch 807
+ Simulating batch 808
+ Simulating batch 809
+ Simulating batch 810
+ Simulating batch 811
+ Simulating batch 812
+ Simulating batch 813
+ Simulating batch 814
+ Simulating batch 815
+ Simulating batch 816
+ Simulating batch 817
+ Simulating batch 818
+ Simulating batch 819
+ Simulating batch 820
+ Simulating batch 821
+ Simulating batch 822
+ Simulating batch 823
+ Simulating batch 824
+ Simulating batch 825
+ Simulating batch 826
+ Simulating batch 827
+ Simulating batch 828
+ Simulating batch 829
+ Simulating batch 830
+ Simulating batch 831
+ Simulating batch 832
+ Simulating batch 833
+ Simulating batch 834
+ Simulating batch 835
+ Simulating batch 836
+ Simulating batch 837
+ Simulating batch 838
+ Simulating batch 839
+ Simulating batch 840
+ Simulating batch 841
+ Simulating batch 842
+ Simulating batch 843
+ Simulating batch 844
+ Simulating batch 845
+ Simulating batch 846
+ Simulating batch 847
+ Simulating batch 848
+ Simulating batch 849
+ Simulating batch 850
+ Simulating batch 851
+ Simulating batch 852
+ Simulating batch 853
+ Simulating batch 854
+ Simulating batch 855
+ Simulating batch 856
+ Simulating batch 857
+ Simulating batch 858
+ Simulating batch 859
+ Simulating batch 860
+ Simulating batch 861
+ Simulating batch 862
+ Simulating batch 863
+ Simulating batch 864
+ Simulating batch 865
+ Simulating batch 866
+ Simulating batch 867
+ Simulating batch 868
+ Simulating batch 869
+ Simulating batch 870
+ Simulating batch 871
+ Simulating batch 872
+ Simulating batch 873
+ Simulating batch 874
+ Simulating batch 875
+ Simulating batch 876
+ Simulating batch 877
+ Simulating batch 878
+ Simulating batch 879
+ Simulating batch 880
+ Simulating batch 881
+ Simulating batch 882
+ Simulating batch 883
+ Simulating batch 884
+ Simulating batch 885
+ Simulating batch 886
+ Simulating batch 887
+ Simulating batch 888
+ Simulating batch 889
+ Simulating batch 890
+ Simulating batch 891
+ Simulating batch 892
+ Simulating batch 893
+ Simulating batch 894
+ Simulating batch 895
+ Simulating batch 896
+ Simulating batch 897
+ Simulating batch 898
+ Simulating batch 899
+ Simulating batch 900
+ Simulating batch 901
+ Simulating batch 902
+ Simulating batch 903
+ Simulating batch 904
+ Simulating batch 905
+ Simulating batch 906
+ Simulating batch 907
+ Simulating batch 908
+ Simulating batch 909
+ Simulating batch 910
+ Simulating batch 911
+ Simulating batch 912
+ Simulating batch 913
+ Simulating batch 914
+ Simulating batch 915
+ Simulating batch 916
+ Simulating batch 917
+ Simulating batch 918
+ Simulating batch 919
+ Simulating batch 920
+ Simulating batch 921
+ Simulating batch 922
+ Simulating batch 923
+ Simulating batch 924
+ Simulating batch 925
+ Simulating batch 926
+ Simulating batch 927
+ Simulating batch 928
+ Simulating batch 929
+ Simulating batch 930
+ Simulating batch 931
+ Simulating batch 932
+ Simulating batch 933
+ Simulating batch 934
+ Simulating batch 935
+ Simulating batch 936
+ Simulating batch 937
+ Simulating batch 938
+ Simulating batch 939
+ Simulating batch 940
+ Simulating batch 941
+ Simulating batch 942
+ Simulating batch 943
+ Simulating batch 944
+ Simulating batch 945
+ Simulating batch 946
+ Simulating batch 947
+ Simulating batch 948
+ Simulating batch 949
+ Simulating batch 950
+ Simulating batch 951
+ Simulating batch 952
+ Simulating batch 953
+ Simulating batch 954
+ Simulating batch 955
+ Simulating batch 956
+ Simulating batch 957
+ Simulating batch 958
+ Simulating batch 959
+ Simulating batch 960
+ Simulating batch 961
+ Simulating batch 962
+ Simulating batch 963
+ Simulating batch 964
+ Simulating batch 965
+ Simulating batch 966
+ Simulating batch 967
+ Simulating batch 968
+ Simulating batch 969
+ Simulating batch 970
+ Simulating batch 971
+ Simulating batch 972
+ Simulating batch 973
+ Simulating batch 974
+ Simulating batch 975
+ Simulating batch 976
+ Simulating batch 977
+ Simulating batch 978
+ Simulating batch 979
+ Simulating batch 980
+ Simulating batch 981
+ Simulating batch 982
+ Simulating batch 983
+ Simulating batch 984
+ Simulating batch 985
+ Simulating batch 986
+ Simulating batch 987
+ Simulating batch 988
+ Simulating batch 989
+ Simulating batch 990
+ Simulating batch 991
+ Simulating batch 992
+ Simulating batch 993
+ Simulating batch 994
+ Simulating batch 995
+ Simulating batch 996
+ Simulating batch 997
+ Simulating batch 998
+ Simulating batch 999
+ Simulating batch 1000
+ Creating state point statepoint.1000.h5...
+
+ =======================>     TIMING STATISTICS     <=======================
+
+ Total time for initialization     = 9.9263e+00 seconds
+   Reading cross sections          = 8.4889e+00 seconds
+ Total time in simulation          = 4.0484e+03 seconds
+   Time in transport only          = 3.9120e+03 seconds
+   Time in active batches          = 4.0484e+03 seconds
+   Time accumulating tallies       = 1.3627e+02 seconds
+   Time writing statepoints        = 4.7140e-02 seconds
+ Total time for finalization       = 2.9685e-05 seconds
+ Total time elapsed                = 4.0584e+03 seconds
+ Calculation Rate (active)         = 92620.7 particles/second
+
+ ============================>     RESULTS     <============================
+
+ Leakage Fraction            = 0.00001 +/- 0.00000
+
+[proxy:0:0@ibm-106] pmi cmd from fd 4: cmd=finalize
+[proxy:0:0@ibm-106] PMI response: cmd=finalize_ack
+[proxy:0:0@ibm-106] pmi cmd from fd 5: cmd=finalize
+[proxy:0:0@ibm-106] PMI response: cmd=finalize_ack

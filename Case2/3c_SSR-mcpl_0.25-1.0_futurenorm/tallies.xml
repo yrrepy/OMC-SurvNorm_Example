@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tallies>
+<!-- Filters -->
+  <filter id="1" type="surface"  bins="1 2 3 4 5 6"/>
+  <filter id="2" type="particle" bins="neutron"/>
+  <filter id="3" type="cell"     bins="1 2 3 4 5 6"/>
+  <filter id="4" type="energy"   bins="0 1 1e4 20e6"/>
+
+<!-- Neutron Current Tally over surfaces  -->
+  <tally id="1">
+    <filters>1 2</filters>
+    <scores>current</scores>
+  </tally>
+
+<!-- Neutron Flux Tally over cells  -->
+  <tally id="2">
+    <filters>3 2 4</filters>
+    <scores>flux</scores>
+  </tally>
+
+<!-- Neutron Flux Tally over cells  -->
+  <tally id="3">
+    <filters>3 2 4</filters>
+    <scores>heating</scores>
+  </tally>
+
+<!-- Neutron Flux Tally over cells  -->
+  <tally id="4">
+    <filters>3 2</filters>
+    <scores>flux</scores>
+  </tally>
+
+<!-- Neutron Flux Tally over cells  -->
+  <tally id="5">
+    <filters>3 2</filters>
+    <scores>heating</scores>
+  </tally>
+
+<!-- ----- Event Count-----  -->
+  <tally id="9991">
+    <filters>2</filters>
+    <scores>events</scores>
+    <estimator>analog</estimator>
+  </tally>
+
+
+
+
+</tallies>
