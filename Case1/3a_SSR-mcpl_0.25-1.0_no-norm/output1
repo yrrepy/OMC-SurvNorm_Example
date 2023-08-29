@@ -1,0 +1,250 @@
+[mpiexec@ibm-003] Launch arguments: /usr/bin/srun -N 1 -n 1 --ntasks-per-node 1 --nodelist ibm-003 --input none /opt/intel/oneapi/mpi/2021.9.0/bin//hydra_bstrap_proxy --upstream-host ibm-003.localdomain --upstream-port 44509 --pgid 0 --launcher slurm --launcher-number 1 --base-path /opt/intel/oneapi/mpi/2021.9.0/bin/ --tree-width 16 --tree-level 1 --time-left -1 --launch-type 0 --debug /opt/intel/oneapi/mpi/2021.9.0/bin//hydra_pmi_proxy --usize -1 --auto-cleanup 1 --abort-signal 9 
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=init pmi_version=1 pmi_subversion=1
+[proxy:0:0@ibm-003] PMI response: cmd=response_to_init pmi_version=1 pmi_subversion=1 rc=0
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=init pmi_version=1 pmi_subversion=1
+[proxy:0:0@ibm-003] PMI response: cmd=response_to_init pmi_version=1 pmi_subversion=1 rc=0
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=get_maxes
+[proxy:0:0@ibm-003] PMI response: cmd=maxes kvsname_max=256 keylen_max=64 vallen_max=4096
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=get_maxes
+[proxy:0:0@ibm-003] PMI response: cmd=maxes kvsname_max=256 keylen_max=64 vallen_max=4096
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=get_appnum
+[proxy:0:0@ibm-003] PMI response: cmd=appnum appnum=0
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=get_appnum
+[proxy:0:0@ibm-003] PMI response: cmd=appnum appnum=0
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=get_my_kvsname
+[proxy:0:0@ibm-003] PMI response: cmd=my_kvsname kvsname=kvs_22507_0
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=get_my_kvsname
+[proxy:0:0@ibm-003] PMI response: cmd=my_kvsname kvsname=kvs_22507_0
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=get kvsname=kvs_22507_0 key=PMI_process_mapping
+[proxy:0:0@ibm-003] PMI response: cmd=get_result rc=0 msg=success value=(vector,(0,1,2))
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=get kvsname=kvs_22507_0 key=PMI_process_mapping
+[proxy:0:0@ibm-003] PMI response: cmd=get_result rc=0 msg=success value=(vector,(0,1,2))
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=put kvsname=kvs_22507_0 key=-bcast-1-0 value=2F6465762F73686D2F496E74656C5F4D50495F47554F36614B
+[proxy:0:0@ibm-003] PMI response: cmd=put_result rc=0 msg=success
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=barrier_in
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=barrier_in
+[proxy:0:0@ibm-003] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-003] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=get kvsname=kvs_22507_0 key=-bcast-1-0
+[proxy:0:0@ibm-003] PMI response: cmd=get_result rc=0 msg=success value=2F6465762F73686D2F496E74656C5F4D50495F47554F36614B
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=put kvsname=kvs_22507_0 key=bc-0 value=mpi#901B78E0CF22E640002000B43977CC2B3200F8D74F00000000004F030088AD4396AF08685B2321032106004D48B00FA133BF09C94FA2E73B350ADF0A0001008C1B5C7CE133BF09C94FD4963E350A030F0083C45001219150FE800000000000006EAE8BFFFE01ADFF4D48B00FA13315F9884E9C53C9350ADF0A0001008C1B5C7CE13315F9884E34ABCA350A030F0083C550010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000$
+[proxy:0:0@ibm-003] PMI response: cmd=put_result rc=0 msg=success
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=barrier_in
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=barrier_in
+[proxy:0:0@ibm-003] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-003] PMI response: cmd=barrier_out
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=get kvsname=kvs_22507_0 key=bc-0
+[proxy:0:0@ibm-003] PMI response: cmd=get_result rc=0 msg=success value=mpi#901B78E0CF22E640002000B43977CC2B3200F8D74F00000000004F030088AD4396AF08685B2321032106004D48B00FA133BF09C94FA2E73B350ADF0A0001008C1B5C7CE133BF09C94FD4963E350A030F0083C45001219150FE800000000000006EAE8BFFFE01ADFF4D48B00FA13315F9884E9C53C9350ADF0A0001008C1B5C7CE13315F9884E34ABCA350A030F0083C550010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000$
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2023 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.13.4-dev
+        Git SHA1 | 46866cb33abe462f8787e7316a35e9d5235ccedd
+       Date/Time | 2023-08-28 14:43:51
+   MPI Processes | 2
+  OpenMP Threads | 8
+
+ Reading settings XML file...
+ Reading cross sections XML file...
+ Reading materials XML file...
+ Reading geometry XML file...
+ Reading H1 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/H1.h5
+ Reading H2 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/H2.h5
+ Reading O16 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/O16.h5
+ Reading O17 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/O17.h5
+ Reading O18 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/O18.h5
+ Reading C12 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/C12.h5
+ Reading C13 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/C13.h5
+ Reading Na23 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Na23.h5
+ Reading Mg24 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Mg24.h5
+ Reading Mg25 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Mg25.h5
+ Reading Mg26 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Mg26.h5
+ Reading Al27 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Al27.h5
+ Reading Si28 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Si28.h5
+ Reading Si29 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Si29.h5
+ Reading Si30 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Si30.h5
+ Reading K39 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/K39.h5
+ Reading K40 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/K40.h5
+ Reading K41 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/K41.h5
+ Reading Ca40 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca40.h5
+ Reading Ca42 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca42.h5
+ Reading Ca43 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca43.h5
+ Reading Ca44 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca44.h5
+ Reading Ca46 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca46.h5
+ Reading Ca48 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ca48.h5
+ Reading Fe54 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe54.h5
+ Reading Fe56 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe56.h5
+ Reading Fe57 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe57.h5
+ Reading Fe58 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Fe58.h5
+ Reading B10 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/B10.h5
+ Reading B11 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/B11.h5
+ Reading Ti46 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti46.h5
+ Reading Ti47 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti47.h5
+ Reading Ti48 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti48.h5
+ Reading Ti49 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti49.h5
+ Reading Ti50 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/Ti50.h5
+ Reading V50 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/V50.h5
+ Reading V51 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/V51.h5
+ Reading c_H_in_H2O from
+ /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_H_in_H2O.h5
+ Reading c_SiO2_alpha from
+ /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_SiO2_alpha.h5
+ Reading c_Fe56 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_Fe56.h5
+ Reading c_Al27 from /theory/pyoung/NukeData/OpenMC/endfb80_hdf5/c_Al27.h5
+ Minimum neutron data temperature: 250 K
+ Maximum neutron data temperature: 2500 K
+ Reading tallies XML file...
+ Preparing distributed cell instances...
+ Reading plot XML file...
+ Writing summary.h5 file...
+ Maximum neutron transport energy: 20000000 eV for H1
+
+ ===============>     FIXED SOURCE TRANSPORT SIMULATION     <===============
+
+ Simulating batch 1
+ Simulating batch 2
+ Simulating batch 3
+ Simulating batch 4
+ Simulating batch 5
+ Simulating batch 6
+ Simulating batch 7
+ Simulating batch 8
+ Simulating batch 9
+ Simulating batch 10
+ Simulating batch 11
+ Simulating batch 12
+ Simulating batch 13
+ Simulating batch 14
+ Simulating batch 15
+ Simulating batch 16
+ Simulating batch 17
+ Simulating batch 18
+ Simulating batch 19
+ Simulating batch 20
+ Simulating batch 21
+ Simulating batch 22
+ Simulating batch 23
+ Simulating batch 24
+ Simulating batch 25
+ Simulating batch 26
+ Simulating batch 27
+ Simulating batch 28
+ Simulating batch 29
+ Simulating batch 30
+ Simulating batch 31
+ Simulating batch 32
+ Simulating batch 33
+ Simulating batch 34
+ Simulating batch 35
+ Simulating batch 36
+ Simulating batch 37
+ Simulating batch 38
+ Simulating batch 39
+ Simulating batch 40
+ Simulating batch 41
+ Simulating batch 42
+ Simulating batch 43
+ Simulating batch 44
+ Simulating batch 45
+ Simulating batch 46
+ Simulating batch 47
+ Simulating batch 48
+ Simulating batch 49
+ Simulating batch 50
+ Simulating batch 51
+ Simulating batch 52
+ Simulating batch 53
+ Simulating batch 54
+ Simulating batch 55
+ Simulating batch 56
+ Simulating batch 57
+ Simulating batch 58
+ Simulating batch 59
+ Simulating batch 60
+ Simulating batch 61
+ Simulating batch 62
+ Simulating batch 63
+ Simulating batch 64
+ Simulating batch 65
+ Simulating batch 66
+ Simulating batch 67
+ Simulating batch 68
+ Simulating batch 69
+ Simulating batch 70
+ Simulating batch 71
+ Simulating batch 72
+ Simulating batch 73
+ Simulating batch 74
+ Simulating batch 75
+ Simulating batch 76
+ Simulating batch 77
+ Simulating batch 78
+ Simulating batch 79
+ Simulating batch 80
+ Simulating batch 81
+ Simulating batch 82
+ Simulating batch 83
+ Simulating batch 84
+ Simulating batch 85
+ Simulating batch 86
+ Simulating batch 87
+ Simulating batch 88
+ Simulating batch 89
+ Simulating batch 90
+ Simulating batch 91
+ Simulating batch 92
+ Simulating batch 93
+ Simulating batch 94
+ Simulating batch 95
+ Simulating batch 96
+ Simulating batch 97
+ Simulating batch 98
+ Simulating batch 99
+ Simulating batch 100
+ Creating state point statepoint.100.h5...
+
+ =======================>     TIMING STATISTICS     <=======================
+
+ Total time for initialization     = 9.2922e+00 seconds
+   Reading cross sections          = 8.4668e+00 seconds
+ Total time in simulation          = 1.2243e+03 seconds
+   Time in transport only          = 1.1769e+03 seconds
+   Time in active batches          = 1.2243e+03 seconds
+   Time accumulating tallies       = 4.7271e+01 seconds
+   Time writing statepoints        = 2.8624e-02 seconds
+ Total time for finalization       = 3.2488e-05 seconds
+ Total time elapsed                = 1.2336e+03 seconds
+ Calculation Rate (active)         = 44266.5 particles/second
+
+ ============================>     RESULTS     <============================
+
+ Leakage Fraction            = 0.00013 +/- 0.00000
+
+[proxy:0:0@ibm-003] pmi cmd from fd 4: cmd=finalize
+[proxy:0:0@ibm-003] PMI response: cmd=finalize_ack
+[proxy:0:0@ibm-003] pmi cmd from fd 5: cmd=finalize
+[proxy:0:0@ibm-003] PMI response: cmd=finalize_ack

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings>
+<!-- Run Settings - Particles *per* Batch  -->
+  <run_mode>fixed source</run_mode>
+  <batches>100</batches>              
+  <particles>100000</particles>    
+  <seed>1</seed>
+
+  <source strength="1.0">
+    <space type="point">
+      <parameters>0.0 0.0 0.0</parameters>
+    </space>
+    <angle type="isotropic"/>
+    <energy type="discrete">
+      <parameters>1000000.0 1.0</parameters>    
+    </energy>
+  </source>
+
+
+  <surf_source_write>      
+        <surface_ids>4</surface_ids>                  
+        <mcpl>true</mcpl>  
+        <max_particles>100000000</max_particles>
+  </surf_source_write>                 
+
+
+
+<!-- Physics Options  -->
+  <photon_transport>false</photon_transport>
+  <survival_biasing>true</survival_biasing>
+  <cutoff>
+          <weight>0.25</weight>
+          <weight_avg>0.5</weight_avg>
+  </cutoff>
+  <temperature_default>293.6 K</temperature_default>
+
+
+
+<!-- Output Options  -->
+  <verbosity>7</verbosity>
+  <output>
+    <tallies>true</tallies>
+  </output>
+
+
+</settings>
