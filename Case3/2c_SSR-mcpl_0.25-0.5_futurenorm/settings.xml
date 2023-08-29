@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings>
+<!-- Run Settings - Particles *per* Batch  -->
+  <run_mode>fixed source</run_mode>
+  <batches>1000</batches>              
+  <particles>374968</particles>    
+  <seed>1</seed>
+  <source file="../1_Custom-MCPL_Biased-2MeV-0.1-1keV-1.0/surface_source.mixedBiased.mcpl" strength="1.0"/>
+
+
+<!-- Physics Options  -->
+  <photon_transport>false</photon_transport>
+  <survival_biasing>true</survival_biasing>
+  <cutoff>
+          <weight>0.025</weight>
+          <weight_avg>0.05</weight_avg>
+  </cutoff>
+  <temperature_default>293.6 K</temperature_default>
+
+
+<!-- Output Options  -->
+  <verbosity>7</verbosity>
+  <output>
+    <tallies>false</tallies>
+  </output>
+
+
+</settings>
